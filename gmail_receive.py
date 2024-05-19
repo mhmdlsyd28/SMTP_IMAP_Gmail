@@ -4,7 +4,8 @@ import email
 def receive_email(email_address, password):
     try:
 
-        imap_server= 'smtp.gmail.com'
+        imap_server= 'hostname of imap server'  # Enter the hostname of the IMAP Server
+        imap_port = 993  # Enter the port number of service
         # Connect to the IMAP server
         mail = imaplib.IMAP4_SSL(imap_server, imap_port)
 
@@ -51,10 +52,8 @@ def get_body(msg):
 
 # Example usage
 if __name__ == "__main__":
-    imap_server = 'imap.gmail.com'
-    imap_port = 993
-    email_address = 'medoelsayed045@gmail.com'
-    password = 'weex zjai huae rwot'
+    recipient_email = 'recipient@example.com'   # Enter your email 
+    recipient_password = 'password'   #Enter the password of the receiver 
 
     # Call the receive_email function
     receive_email(email_address, password)
